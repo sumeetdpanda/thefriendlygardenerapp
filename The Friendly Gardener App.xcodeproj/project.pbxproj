@@ -13,6 +13,8 @@
 		937DFC2F288FA2AB00425133 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937DFC2D288FA2AB00425133 /* Main.storyboard */; };
 		937DFC31288FA2AE00425133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 937DFC30288FA2AE00425133 /* Assets.xcassets */; };
 		937DFC34288FA2AE00425133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937DFC32288FA2AE00425133 /* LaunchScreen.storyboard */; };
+		F91DE4F928A0926C0062433E /* DBModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F91DE4F728A0926C0062433E /* DBModel.xcdatamodeld */; };
+		F99D7AE828A0C7FB0026C748 /* GardensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D7AE728A0C7FB0026C748 /* GardensViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		937DFC30288FA2AE00425133 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		937DFC33288FA2AE00425133 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		937DFC35288FA2AE00425133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F91DE4F828A0926C0062433E /* DBModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DBModel.xcdatamodel; sourceTree = "<group>"; };
+		F99D7AE728A0C7FB0026C748 /* GardensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardensViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				937DFC27288FA2AB00425133 /* AppDelegate.swift */,
 				937DFC29288FA2AB00425133 /* SceneDelegate.swift */,
 				937DFC2B288FA2AB00425133 /* ViewController.swift */,
+				F99D7AE728A0C7FB0026C748 /* GardensViewController.swift */,
 				937DFC2D288FA2AB00425133 /* Main.storyboard */,
 				937DFC30288FA2AE00425133 /* Assets.xcassets */,
 				937DFC32288FA2AE00425133 /* LaunchScreen.storyboard */,
 				937DFC35288FA2AE00425133 /* Info.plist */,
+				F91DE4F728A0926C0062433E /* DBModel.xcdatamodeld */,
 			);
 			path = "The Friendly Gardener App";
 			sourceTree = "<group>";
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F99D7AE828A0C7FB0026C748 /* GardensViewController.swift in Sources */,
 				937DFC2C288FA2AB00425133 /* ViewController.swift in Sources */,
 				937DFC28288FA2AB00425133 /* AppDelegate.swift in Sources */,
 				937DFC2A288FA2AB00425133 /* SceneDelegate.swift in Sources */,
+				F91DE4F928A0926C0062433E /* DBModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +366,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F91DE4F728A0926C0062433E /* DBModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F91DE4F828A0926C0062433E /* DBModel.xcdatamodel */,
+			);
+			currentVersion = F91DE4F828A0926C0062433E /* DBModel.xcdatamodel */;
+			path = DBModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 937DFC1C288FA2AB00425133 /* Project object */;
 }
