@@ -13,6 +13,9 @@
 		937DFC2F288FA2AB00425133 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937DFC2D288FA2AB00425133 /* Main.storyboard */; };
 		937DFC31288FA2AE00425133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 937DFC30288FA2AE00425133 /* Assets.xcassets */; };
 		937DFC34288FA2AE00425133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937DFC32288FA2AE00425133 /* LaunchScreen.storyboard */; };
+		93DBC86028A21C27001CC6C3 /* ChooseAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DBC85F28A21C27001CC6C3 /* ChooseAppointmentViewController.swift */; };
+		93DBC86228A224C8001CC6C3 /* ChooseAppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DBC86128A224C8001CC6C3 /* ChooseAppointmentTableViewCell.swift */; };
+		93DBC86428A22ED0001CC6C3 /* AppointmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DBC86328A22ED0001CC6C3 /* AppointmentDetailViewController.swift */; };
 		F91DE4F928A0926C0062433E /* DBModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F91DE4F728A0926C0062433E /* DBModel.xcdatamodeld */; };
 		F99D7AE828A0C7FB0026C748 /* GardensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D7AE728A0C7FB0026C748 /* GardensViewController.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +29,9 @@
 		937DFC30288FA2AE00425133 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		937DFC33288FA2AE00425133 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		937DFC35288FA2AE00425133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93DBC85F28A21C27001CC6C3 /* ChooseAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppointmentViewController.swift; sourceTree = "<group>"; };
+		93DBC86128A224C8001CC6C3 /* ChooseAppointmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppointmentTableViewCell.swift; sourceTree = "<group>"; };
+		93DBC86328A22ED0001CC6C3 /* AppointmentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailViewController.swift; sourceTree = "<group>"; };
 		F91DE4F828A0926C0062433E /* DBModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DBModel.xcdatamodel; sourceTree = "<group>"; };
 		F99D7AE728A0C7FB0026C748 /* GardensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardensViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +66,7 @@
 		937DFC26288FA2AB00425133 /* The Friendly Gardener App */ = {
 			isa = PBXGroup;
 			children = (
+				93DBC85928A21B15001CC6C3 /* Customer */,
 				937DFC27288FA2AB00425133 /* AppDelegate.swift */,
 				937DFC29288FA2AB00425133 /* SceneDelegate.swift */,
 				937DFC2B288FA2AB00425133 /* ViewController.swift */,
@@ -71,6 +78,16 @@
 				F91DE4F728A0926C0062433E /* DBModel.xcdatamodeld */,
 			);
 			path = "The Friendly Gardener App";
+			sourceTree = "<group>";
+		};
+		93DBC85928A21B15001CC6C3 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				93DBC85F28A21C27001CC6C3 /* ChooseAppointmentViewController.swift */,
+				93DBC86128A224C8001CC6C3 /* ChooseAppointmentTableViewCell.swift */,
+				93DBC86328A22ED0001CC6C3 /* AppointmentDetailViewController.swift */,
+			);
+			path = Customer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,11 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93DBC86028A21C27001CC6C3 /* ChooseAppointmentViewController.swift in Sources */,
+				93DBC86428A22ED0001CC6C3 /* AppointmentDetailViewController.swift in Sources */,
 				F99D7AE828A0C7FB0026C748 /* GardensViewController.swift in Sources */,
 				937DFC2C288FA2AB00425133 /* ViewController.swift in Sources */,
 				937DFC28288FA2AB00425133 /* AppDelegate.swift in Sources */,
 				937DFC2A288FA2AB00425133 /* SceneDelegate.swift in Sources */,
 				F91DE4F928A0926C0062433E /* DBModel.xcdatamodeld in Sources */,
+				93DBC86228A224C8001CC6C3 /* ChooseAppointmentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
