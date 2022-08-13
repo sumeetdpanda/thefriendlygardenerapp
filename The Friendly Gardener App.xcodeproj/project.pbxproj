@@ -19,6 +19,8 @@
 		F91DE4F928A0926C0062433E /* DBModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F91DE4F728A0926C0062433E /* DBModel.xcdatamodeld */; };
 		F92253E528A49C9B00801C30 /* MyGardensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92253E428A49C9B00801C30 /* MyGardensViewController.swift */; };
 		F92253E728A4B09000801C30 /* GardenInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92253E628A4B09000801C30 /* GardenInfoViewController.swift */; };
+		F92253E928A5731400801C30 /* MyAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92253E828A5731400801C30 /* MyAppointmentsViewController.swift */; };
+		F92989B428A57D0000C09677 /* AppointmentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92989B328A57D0000C09677 /* AppointmentInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		F91DE4F828A0926C0062433E /* DBModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DBModel.xcdatamodel; sourceTree = "<group>"; };
 		F92253E428A49C9B00801C30 /* MyGardensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGardensViewController.swift; sourceTree = "<group>"; };
 		F92253E628A4B09000801C30 /* GardenInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenInfoViewController.swift; sourceTree = "<group>"; };
+		F92253E828A5731400801C30 /* MyAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppointmentsViewController.swift; sourceTree = "<group>"; };
+		F92989B328A57D0000C09677 /* AppointmentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 				937DFC2B288FA2AB00425133 /* ViewController.swift */,
 				F92253E428A49C9B00801C30 /* MyGardensViewController.swift */,
 				F92253E628A4B09000801C30 /* GardenInfoViewController.swift */,
+				F92253E828A5731400801C30 /* MyAppointmentsViewController.swift */,
+				F92989B328A57D0000C09677 /* AppointmentInfoViewController.swift */,
 				937DFC2D288FA2AB00425133 /* Main.storyboard */,
 				937DFC30288FA2AE00425133 /* Assets.xcassets */,
 				937DFC32288FA2AE00425133 /* LaunchScreen.storyboard */,
@@ -166,6 +172,8 @@
 			files = (
 				93DBC86028A21C27001CC6C3 /* ChooseAppointmentViewController.swift in Sources */,
 				93DBC86428A22ED0001CC6C3 /* AppointmentDetailViewController.swift in Sources */,
+				F92253E928A5731400801C30 /* MyAppointmentsViewController.swift in Sources */,
+				F92989B428A57D0000C09677 /* AppointmentInfoViewController.swift in Sources */,
 				937DFC2C288FA2AB00425133 /* ViewController.swift in Sources */,
 				937DFC28288FA2AB00425133 /* AppDelegate.swift in Sources */,
 				F92253E728A4B09000801C30 /* GardenInfoViewController.swift in Sources */,

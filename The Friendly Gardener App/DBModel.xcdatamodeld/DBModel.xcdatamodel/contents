@@ -5,6 +5,7 @@
         <attribute name="gardenId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="note" optional="YES" attributeType="String"/>
+        <relationship name="garden" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Garden"/>
     </entity>
     <entity name="Garden" representedClassName="Garden" syncable="YES" codeGenerationType="class">
         <attribute name="area" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -17,8 +18,8 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="User" positionX="-78.77923583984375" positionY="-139.4604797363281" width="128" height="74"/>
-        <element name="Appointment" positionX="-27" positionY="-81" width="128" height="89"/>
+        <element name="Appointment" positionX="-27" positionY="-81" width="128" height="104"/>
         <element name="Garden" positionX="0" positionY="-27" width="128" height="74"/>
+        <element name="User" positionX="-78.77923583984375" positionY="-139.4604797363281" width="128" height="74"/>
     </elements>
 </model>
