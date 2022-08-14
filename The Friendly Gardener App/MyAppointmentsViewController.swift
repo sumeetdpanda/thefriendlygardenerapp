@@ -13,6 +13,8 @@ class MyAppointmentsViewController: UIViewController, UITableViewDelegate, UITab
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var itemsTableView: UITableView!
+    @IBOutlet weak var gardenName: NSLayoutConstraint!
+    @IBOutlet weak var gardenArea: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +40,8 @@ class MyAppointmentsViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = itemsTableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
         let item = self.items![indexPath.row]
-        cell.textLabel?.text = "\(item.note!)"
+        var label = item.gardenName! + " on " + item.date! + " at " + item.time!
+        cell.textLabel?.text = label
         return cell
     }
     

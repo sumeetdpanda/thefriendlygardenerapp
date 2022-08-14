@@ -69,16 +69,27 @@ class AppointmentInfoViewController: UIViewController {
     func returnGardens(handler: @escaping UIActionHandler) -> [UIAction]{
         let gardens = getGardens()
         var returnGardens:[UIAction] = []
-        var flag = 1
+        var flag = 0
         
-        for garden in gardens {
-            if(flag == 1){
-                returnGardens.append(UIAction(title: garden.title!, state: .on, handler: handler))
-                flag += 1
-            }
-            else {
+        if(flag == 0){
+            returnGardens.append(UIAction(title: "Select a garden", state: .on, handler: handler))
+        }
+        
+        if(gardens != []){
+            flag += 1
+        }
+        
+        if(flag == 1){
+            for garden in gardens {
                 returnGardens.append(UIAction(title: garden.title!, handler: handler))
             }
+        }else{
+            let alert = UIAlertController(title: "Error", message: "You need gardens to book an appointment", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: {_ in
+                
+                _ = self.navigationController?.popViewController(animated: true)
+            }))
+            present(alert, animated: true)
         }
         return returnGardens
     }
@@ -130,7 +141,7 @@ class AppointmentInfoViewController: UIViewController {
     //Core Data Save Data
     func saveData(garden: String, date: String, time: String, note:String? = nil){
         let newEntry = Appointment(context: context)
-        //newEntry.gardenName = garden
+        newEntry.gardenName = garden
         newEntry.date = date
         newEntry.time = time
         newEntry.note = note
@@ -138,13 +149,16 @@ class AppointmentInfoViewController: UIViewController {
         do{
             try context.save()
             let alert = UIAlertController(title: "Success", message: "Your Appointment has been created", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { _ in
+                _ = self.navigationController?.popViewController(animated: true)
+            }))
             present(alert, animated: true)
             
-            navigationController?.popViewController(animated: true)
         } catch{
             let alert = UIAlertController(title: "Error", message: "There was some error in saving data", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
+                _ = self.navigationController?.popViewController(animated: true)
+            }))
             present(alert, animated: true)
         }
     }
