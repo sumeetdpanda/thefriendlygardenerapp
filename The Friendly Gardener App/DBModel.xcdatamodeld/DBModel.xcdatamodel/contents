@@ -5,6 +5,7 @@
         <attribute name="gardenId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="time" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Garden" representedClassName="Garden" syncable="YES" codeGenerationType="class">
         <attribute name="area" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -17,7 +18,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Appointment" positionX="-27" positionY="-81" width="128" height="103"/>
+        <element name="Appointment" positionX="-38.94512939453125" positionY="-165.0779724121094" width="128" height="118"/>
         <element name="Garden" positionX="-10.45556640625" positionY="60.1505126953125" width="128" height="74"/>
         <element name="User" positionX="-190.2565307617188" positionY="-85.6874084472656" width="128" height="74"/>
     </elements>

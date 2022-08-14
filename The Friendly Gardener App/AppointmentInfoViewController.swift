@@ -132,7 +132,7 @@ class AppointmentInfoViewController: UIViewController {
         let newEntry = Appointment(context: context)
         //newEntry.gardenName = garden
         newEntry.date = date
-        //newEntry.time = time
+        newEntry.time = time
         newEntry.note = note
         
         do{
@@ -140,7 +140,8 @@ class AppointmentInfoViewController: UIViewController {
             let alert = UIAlertController(title: "Success", message: "Your Appointment has been created", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
             present(alert, animated: true)
-            _ = navigationController?.popViewController(animated: true)
+            
+            navigationController?.popViewController(animated: true)
         } catch{
             let alert = UIAlertController(title: "Error", message: "There was some error in saving data", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
