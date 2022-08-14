@@ -332,7 +332,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gzv-J8-rrU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="Gzv-J8-rrU">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gzv-J8-rrU" id="wko-50-hJP">
@@ -501,7 +501,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgE-jp-eiY">
-                                <rect key="frame" x="49" y="288" width="315" height="82"/>
+                                <rect key="frame" x="51" y="288" width="315" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="CJx-my-fhP"/>
                                     <constraint firstAttribute="width" constant="315" id="u3B-lN-SLs"/>
@@ -515,7 +515,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89U-Mz-tcI">
-                                <rect key="frame" x="49" y="415" width="315" height="82"/>
+                                <rect key="frame" x="51" y="415" width="315" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="315" id="SdV-Zx-F7C"/>
                                     <constraint firstAttribute="height" constant="82" id="ol2-ZV-QUJ"/>
@@ -526,7 +526,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozX-l8-VFx">
-                                <rect key="frame" x="49" y="542" width="315" height="82"/>
+                                <rect key="frame" x="51" y="542" width="315" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="9wl-fa-p3G"/>
                                     <constraint firstAttribute="width" constant="315" id="fMe-OJ-LC3"/>
