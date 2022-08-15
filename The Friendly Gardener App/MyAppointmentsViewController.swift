@@ -40,7 +40,7 @@ class MyAppointmentsViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = itemsTableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
         let item = self.items![indexPath.row]
-        var label = item.gardenName! + " on " + item.date! + " at " + item.time!
+        var label = (item.gardenName ?? "Garden") + " on " + item.date! + " at " + item.time!
         cell.textLabel?.text = label
         return cell
     }
