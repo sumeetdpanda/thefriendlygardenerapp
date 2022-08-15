@@ -563,7 +563,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgE-jp-eiY">
-                                <rect key="frame" x="51" y="288" width="315" height="82"/>
+                                <rect key="frame" x="49" y="288" width="315" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="CJx-my-fhP"/>
                                     <constraint firstAttribute="width" constant="315" id="u3B-lN-SLs"/>
@@ -577,7 +577,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozX-l8-VFx">
-                                <rect key="frame" x="51" y="400" width="315" height="82"/>
+                                <rect key="frame" x="49" y="400" width="315" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="9wl-fa-p3G"/>
                                     <constraint firstAttribute="width" constant="315" id="fMe-OJ-LC3"/>
@@ -788,7 +788,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngh-iB-bee">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngh-iB-bee">
                                 <rect key="frame" x="101" y="316" width="212" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Reserve Appointment"/>
@@ -803,6 +803,7 @@
                             <constraint firstItem="vPm-9k-YO0" firstAttribute="leading" secondItem="Mwq-0d-Vhn" secondAttribute="leading" constant="20" id="0Fu-3a-aUh"/>
                             <constraint firstItem="6Sr-tp-Y4x" firstAttribute="leading" secondItem="vPm-9k-YO0" secondAttribute="trailing" constant="5" id="3ac-J4-wfM"/>
                             <constraint firstItem="Vxj-Qq-3B1" firstAttribute="top" secondItem="Mwq-0d-Vhn" secondAttribute="top" constant="50" id="Dgs-jb-KZP"/>
+                            <constraint firstItem="Ngh-iB-bee" firstAttribute="top" secondItem="zwN-RF-9au" secondAttribute="bottom" constant="100" id="H4r-tK-ObA"/>
                             <constraint firstItem="NwN-nS-zIT" firstAttribute="top" secondItem="vPm-9k-YO0" secondAttribute="bottom" constant="25" id="JBF-RN-2RS"/>
                             <constraint firstItem="Mwq-0d-Vhn" firstAttribute="trailing" secondItem="Ngh-iB-bee" secondAttribute="trailing" constant="101" id="M8p-E0-nsf"/>
                             <constraint firstItem="NwN-nS-zIT" firstAttribute="leading" secondItem="Mwq-0d-Vhn" secondAttribute="leading" constant="20" id="MIR-tZ-dl2"/>

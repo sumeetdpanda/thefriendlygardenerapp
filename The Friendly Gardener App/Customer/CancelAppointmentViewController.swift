@@ -64,6 +64,7 @@ class CancelAppointmentViewController: UIViewController, UITableViewDelegate, UI
                 alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: nil))
                 self.present(alert, animated: true)
             }
+            self.appointments.remove(at: indexPath.row)
             self.tableView.reloadData()
             completionHandler(true)
         }
