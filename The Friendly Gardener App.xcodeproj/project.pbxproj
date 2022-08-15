@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9365C82728A9BC5B00B4913C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365C82628A9BC5B00B4913C /* SignupViewController.swift */; };
+		9365C82928A9C1EB00B4913C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365C82828A9C1EB00B4913C /* LoginViewController.swift */; };
+		9365C82E28A9D12000B4913C /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365C82D28A9D12000B4913C /* CustomerViewController.swift */; };
+		9365C83028A9D13400B4913C /* GardenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365C82F28A9D13400B4913C /* GardenerViewController.swift */; };
 		937DFC28288FA2AB00425133 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DFC27288FA2AB00425133 /* AppDelegate.swift */; };
 		937DFC2A288FA2AB00425133 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DFC29288FA2AB00425133 /* SceneDelegate.swift */; };
 		937DFC2C288FA2AB00425133 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DFC2B288FA2AB00425133 /* ViewController.swift */; };
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		9365C82628A9BC5B00B4913C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		9365C82828A9C1EB00B4913C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9365C82D28A9D12000B4913C /* CustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
+		9365C82F28A9D13400B4913C /* GardenerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenerViewController.swift; sourceTree = "<group>"; };
 		937DFC24288FA2AB00425133 /* The Friendly Gardener App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Friendly Gardener App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		937DFC27288FA2AB00425133 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		937DFC29288FA2AB00425133 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +94,9 @@
 				937DFC32288FA2AE00425133 /* LaunchScreen.storyboard */,
 				937DFC35288FA2AE00425133 /* Info.plist */,
 				F91DE4F728A0926C0062433E /* DBModel.xcdatamodeld */,
+				9365C82828A9C1EB00B4913C /* LoginViewController.swift */,
+				9365C82D28A9D12000B4913C /* CustomerViewController.swift */,
+				9365C82F28A9D13400B4913C /* GardenerViewController.swift */,
 			);
 			path = "The Friendly Gardener App";
 			sourceTree = "<group>";
@@ -179,11 +188,14 @@
 				F92989B428A57D0000C09677 /* AppointmentInfoViewController.swift in Sources */,
 				937DFC2C288FA2AB00425133 /* ViewController.swift in Sources */,
 				937DFC28288FA2AB00425133 /* AppDelegate.swift in Sources */,
+				9365C82E28A9D12000B4913C /* CustomerViewController.swift in Sources */,
 				9365C82728A9BC5B00B4913C /* SignupViewController.swift in Sources */,
+				9365C83028A9D13400B4913C /* GardenerViewController.swift in Sources */,
 				F92253E728A4B09000801C30 /* GardenInfoViewController.swift in Sources */,
 				937DFC2A288FA2AB00425133 /* SceneDelegate.swift in Sources */,
 				F91DE4F928A0926C0062433E /* DBModel.xcdatamodeld in Sources */,
 				93DBC86228A224C8001CC6C3 /* ChooseAppointmentTableViewCell.swift in Sources */,
+				9365C82928A9C1EB00B4913C /* LoginViewController.swift in Sources */,
 				F92253E528A49C9B00801C30 /* MyGardensViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

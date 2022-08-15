@@ -84,7 +84,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="The_Friendly_Gardener_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="The_Friendly_Gardener_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="2705.7971014492755" y="67.633928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="561-QE-3p1">
             <objects>
-                <viewController id="thP-b0-0iA" sceneMemberID="viewController">
+                <viewController id="thP-b0-0iA" customClass="LoginViewController" customModule="The_Friendly_Gardener_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Db1-es-pkz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,12 +152,12 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Uz-aq-ms0">
                                 <rect key="frame" x="101" y="251.5" width="212" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WXX-U3-aSj">
                                 <rect key="frame" x="101" y="295.5" width="212" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzD-YX-yxF">
                                 <rect key="frame" x="102.5" y="104" width="209.5" height="97.5"/>
@@ -172,9 +172,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="As Gardener">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="21c-mm-jib" kind="presentation" modalPresentationStyle="fullScreen" id="uWD-5F-TlM"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hl6-Gh-2sj">
                                 <rect key="frame" x="101" y="349.5" width="212" height="40.5"/>
@@ -182,9 +179,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="As Customer">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="lP1-bk-adg" kind="presentation" modalPresentationStyle="fullScreen" id="Q74-KV-pdf"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="miw-RT-jJB"/>
@@ -207,6 +201,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RgY-LS-5Zf"/>
+                    <connections>
+                        <outlet property="customerLoginButton" destination="hl6-Gh-2sj" id="8UF-tv-HWB"/>
+                        <outlet property="emailText" destination="7Uz-aq-ms0" id="tqH-60-nBO"/>
+                        <outlet property="gardenerLoginButton" destination="S3V-oK-NXS" id="usZ-pm-50k"/>
+                        <outlet property="passwordText" destination="WXX-U3-aSj" id="R7L-IH-VbK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pN9-cH-CND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -447,10 +447,10 @@
             </objects>
             <point key="canvasLocation" x="332" y="2540"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Customer View Controller-->
         <scene sceneID="bCH-mQ-fIn">
             <objects>
-                <tabBarController id="lP1-bk-adg" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CustomerViewController" id="lP1-bk-adg" customClass="CustomerViewController" customModule="The_Friendly_Gardener_App" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="H2x-EP-sYn"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="phj-eR-2Vk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -466,10 +466,10 @@
             </objects>
             <point key="canvasLocation" x="2205.7971014492755" y="955.58035714285711"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Gardener View Controller-->
         <scene sceneID="PuH-DK-FWo">
             <objects>
-                <tabBarController id="21c-mm-jib" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="GardenerViewController" id="21c-mm-jib" customClass="GardenerViewController" customModule="The_Friendly_Gardener_App" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3Qr-0o-niM"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tAR-ve-ltD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

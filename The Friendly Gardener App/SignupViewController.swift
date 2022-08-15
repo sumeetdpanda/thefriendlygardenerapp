@@ -41,7 +41,7 @@ class SignupViewController: UIViewController {
         
         if(name != ""){
             if(email != ""){
-                if(password != "" && password.count > 8){
+                if(password != "" && password.count >= 8){
                     if(cnfPassword != "" && password == cnfPassword){
                         
                         // Save Data
@@ -78,13 +78,16 @@ class SignupViewController: UIViewController {
             let alert = UIAlertController(title: "Success", message: "User successfully registered", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: {_ in
                 
-                _ = self.navigationController?.popViewController(animated: true)
+                let story = UIStoryboard(name: "Main", bundle: nil)
+                let controller = story.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+                controller.modalPresentationStyle = .fullScreen
+                self.present(controller, animated: true)
             }))
             present(alert, animated: true)
             
         } catch{
             let alert = UIAlertController(title: "Error", message: "Something went wrong, please contact the developer.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, andler: {_ in
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: {_ in
                 
                 _ = self.navigationController?.popViewController(animated: true)
             }))
