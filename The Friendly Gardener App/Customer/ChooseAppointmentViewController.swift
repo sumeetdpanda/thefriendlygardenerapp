@@ -30,6 +30,7 @@ class ChooseAppointmentViewController: UIViewController, UITableViewDataSource, 
         
         table.dataSource = self
         table.delegate = self
+        loadData()
     }
     
 
@@ -48,10 +49,6 @@ class ChooseAppointmentViewController: UIViewController, UITableViewDataSource, 
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 350
-    }
-    
     @objc func selectionButton(sender:UIButton)
     {
         let indexPath1 = IndexPath(row: sender.tag, section: 0)
@@ -68,7 +65,9 @@ class ChooseAppointmentViewController: UIViewController, UITableViewDataSource, 
             let dbData = try context.fetch(Appointment.fetchRequest())
             
             for appointment in dbData{
-                data.append(Property(propertyAddress: appointment.address!, properyArea: appointment.area!))
+                if(appointment.taken == 0){
+                    data.append(Property(propertyAddress: appointment.address!, properyArea: appointment.area!))
+                }
             }
             
         } catch{

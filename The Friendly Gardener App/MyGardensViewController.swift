@@ -38,7 +38,7 @@ class MyGardensViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = itemsTableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
         let item = self.items![indexPath.row]
-        cell.textLabel?.text = "\(item.title!) - \(item.area)m2"
+        cell.textLabel?.text = String(item.title!) + " - " + String(item.area!) + "sq. m"
         return cell
     }
     

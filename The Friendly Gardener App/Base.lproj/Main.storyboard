@@ -180,22 +180,40 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                 </buttonConfiguration>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Still not registered?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUt-dc-0AW">
+                                <rect key="frame" x="80" y="831" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7g-M6-aXO">
+                                <rect key="frame" x="235" y="826" width="108" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Up Now"/>
+                                <connections>
+                                    <action selector="signupButtonClicked:" destination="thP-b0-0iA" eventType="touchUpInside" id="3yi-yt-th8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="miw-RT-jJB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="S3V-oK-NXS" firstAttribute="top" secondItem="hl6-Gh-2sj" secondAttribute="bottom" constant="20" id="1EO-XC-fQV"/>
                             <constraint firstItem="hl6-Gh-2sj" firstAttribute="top" secondItem="WXX-U3-aSj" secondAttribute="bottom" constant="20" id="1oI-Bk-i5d"/>
+                            <constraint firstItem="j7g-M6-aXO" firstAttribute="bottom" secondItem="Db1-es-pkz" secondAttribute="bottomMargin" constant="-5" id="2sB-F6-ulJ"/>
                             <constraint firstItem="S3V-oK-NXS" firstAttribute="leading" secondItem="miw-RT-jJB" secondAttribute="leading" constant="101" id="6pN-oC-r6k"/>
                             <constraint firstItem="miw-RT-jJB" firstAttribute="trailing" secondItem="S3V-oK-NXS" secondAttribute="trailing" constant="101" id="817-Qr-v8P"/>
                             <constraint firstItem="7Uz-aq-ms0" firstAttribute="leading" secondItem="miw-RT-jJB" secondAttribute="leading" constant="101" id="9js-ym-qAK"/>
+                            <constraint firstItem="j7g-M6-aXO" firstAttribute="leading" secondItem="sUt-dc-0AW" secondAttribute="trailing" constant="8" id="CPI-nb-Ovn"/>
                             <constraint firstItem="miw-RT-jJB" firstAttribute="trailing" secondItem="hl6-Gh-2sj" secondAttribute="trailing" constant="101" id="DVd-y1-243"/>
                             <constraint firstItem="HzD-YX-yxF" firstAttribute="centerX" secondItem="Db1-es-pkz" secondAttribute="centerX" id="Gx8-As-EOL"/>
                             <constraint firstItem="miw-RT-jJB" firstAttribute="trailing" secondItem="WXX-U3-aSj" secondAttribute="trailing" constant="101" id="Q5q-2h-j47"/>
                             <constraint firstItem="HzD-YX-yxF" firstAttribute="top" secondItem="miw-RT-jJB" secondAttribute="top" constant="60" id="Q6P-Gb-ONd"/>
+                            <constraint firstItem="miw-RT-jJB" firstAttribute="bottom" secondItem="sUt-dc-0AW" secondAttribute="bottom" constant="10" id="YSO-M2-cnl"/>
                             <constraint firstItem="miw-RT-jJB" firstAttribute="trailing" secondItem="7Uz-aq-ms0" secondAttribute="trailing" constant="101" id="gds-GI-Ick"/>
                             <constraint firstItem="hl6-Gh-2sj" firstAttribute="leading" secondItem="miw-RT-jJB" secondAttribute="leading" constant="101" id="hWy-ev-FGY"/>
                             <constraint firstItem="WXX-U3-aSj" firstAttribute="top" secondItem="7Uz-aq-ms0" secondAttribute="bottom" constant="10" id="hdV-tW-fFx"/>
+                            <constraint firstItem="sUt-dc-0AW" firstAttribute="leading" secondItem="miw-RT-jJB" secondAttribute="leading" constant="80" id="mky-oW-mWk"/>
                             <constraint firstItem="7Uz-aq-ms0" firstAttribute="top" secondItem="HzD-YX-yxF" secondAttribute="bottom" constant="50" id="tkL-4a-3za"/>
                             <constraint firstItem="WXX-U3-aSj" firstAttribute="leading" secondItem="miw-RT-jJB" secondAttribute="leading" constant="101" id="wme-RD-gO0"/>
                         </constraints>
@@ -206,6 +224,7 @@
                         <outlet property="emailText" destination="7Uz-aq-ms0" id="tqH-60-nBO"/>
                         <outlet property="gardenerLoginButton" destination="S3V-oK-NXS" id="usZ-pm-50k"/>
                         <outlet property="passwordText" destination="WXX-U3-aSj" id="R7L-IH-VbK"/>
+                        <outlet property="signupButton" destination="j7g-M6-aXO" id="oan-fq-t1c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pN9-cH-CND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -544,7 +563,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgE-jp-eiY">
-                                <rect key="frame" x="49" y="288" width="315" height="82"/>
+                                <rect key="frame" x="51" y="288" width="315" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="CJx-my-fhP"/>
                                     <constraint firstAttribute="width" constant="315" id="u3B-lN-SLs"/>
@@ -558,7 +577,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozX-l8-VFx">
-                                <rect key="frame" x="49" y="400" width="315" height="82"/>
+                                <rect key="frame" x="51" y="400" width="315" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="9wl-fa-p3G"/>
                                     <constraint firstAttribute="width" constant="315" id="fMe-OJ-LC3"/>
@@ -567,6 +586,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Cancel Appointment">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="fMe-2s-3Bs" kind="show" id="e3W-dG-kSp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Txs-cm-XAz"/>
@@ -639,19 +661,19 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="BdH-2m-bzx" firstAttribute="leading" secondItem="fjt-6e-2X5" secondAttribute="trailing" constant="5" id="6WV-NM-tMN"/>
                                                 <constraint firstItem="uQN-AW-LTl" firstAttribute="leading" secondItem="LK3-A3-3xI" secondAttribute="trailing" constant="5" id="7OS-yz-222"/>
                                                 <constraint firstItem="BdH-2m-bzx" firstAttribute="leading" secondItem="fjt-6e-2X5" secondAttribute="trailing" constant="5" id="OWn-8u-GTj"/>
                                                 <constraint firstAttribute="trailing" secondItem="uQN-AW-LTl" secondAttribute="trailing" constant="10" id="Wfd-sv-1Lr"/>
                                                 <constraint firstItem="LK3-A3-3xI" firstAttribute="top" secondItem="lXV-xG-kNU" secondAttribute="topMargin" constant="10" id="djK-vB-tTt"/>
                                                 <constraint firstItem="LK3-A3-3xI" firstAttribute="leading" secondItem="lXV-xG-kNU" secondAttribute="leadingMargin" id="eBH-JF-215"/>
-                                                <constraint firstItem="41x-sL-IzM" firstAttribute="top" secondItem="BdH-2m-bzx" secondAttribute="bottom" constant="25" id="ghw-xP-pEb"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="41x-sL-IzM" secondAttribute="trailing" constant="10" id="hRK-wM-2Kx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="41x-sL-IzM" secondAttribute="bottom" constant="10" id="hbg-AP-qYh"/>
                                                 <constraint firstItem="fjt-6e-2X5" firstAttribute="top" secondItem="LK3-A3-3xI" secondAttribute="bottom" constant="10" id="l6o-gX-FQF"/>
                                                 <constraint firstItem="41x-sL-IzM" firstAttribute="leading" secondItem="lXV-xG-kNU" secondAttribute="leadingMargin" constant="10" id="nw0-Sk-Fhe"/>
                                                 <constraint firstItem="BdH-2m-bzx" firstAttribute="top" secondItem="LK3-A3-3xI" secondAttribute="bottom" constant="10" id="oRh-71-iVg"/>
                                                 <constraint firstItem="fjt-6e-2X5" firstAttribute="leading" secondItem="lXV-xG-kNU" secondAttribute="leadingMargin" id="p8Z-fA-8L0"/>
                                                 <constraint firstItem="uQN-AW-LTl" firstAttribute="top" secondItem="lXV-xG-kNU" secondAttribute="top" constant="20" id="r36-k4-OXI"/>
+                                                <constraint firstItem="41x-sL-IzM" firstAttribute="top" secondItem="fjt-6e-2X5" secondAttribute="bottom" constant="25" id="zlS-8z-Jzr"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -680,6 +702,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCs-br-mbk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4995.652173913044" y="3315.4017857142858"/>
+        </scene>
+        <!--Cancel Appointment View Controller-->
+        <scene sceneID="yR6-KY-Juw">
+            <objects>
+                <viewController id="fMe-2s-3Bs" customClass="CancelAppointmentViewController" customModule="The_Friendly_Gardener_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0X2-hT-d90">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2oG-Nd-e1J">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="heg-Oh-vc5">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="heg-Oh-vc5" id="dbl-SK-FfE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EZp-uY-Ui2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2oG-Nd-e1J" firstAttribute="top" secondItem="EZp-uY-Ui2" secondAttribute="top" id="7WG-8U-y76"/>
+                            <constraint firstItem="2oG-Nd-e1J" firstAttribute="leading" secondItem="EZp-uY-Ui2" secondAttribute="leading" id="9oD-K6-8L2"/>
+                            <constraint firstItem="EZp-uY-Ui2" firstAttribute="trailing" secondItem="2oG-Nd-e1J" secondAttribute="trailing" id="Dfi-XL-Zwi"/>
+                            <constraint firstItem="EZp-uY-Ui2" firstAttribute="bottom" secondItem="2oG-Nd-e1J" secondAttribute="bottom" id="P7M-dY-UuZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dap-Rl-dNA"/>
+                    <connections>
+                        <outlet property="tableView" destination="2oG-Nd-e1J" id="YFc-9N-kJf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kGL-eR-BNf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6055" y="3315"/>
         </scene>
         <!--Appointment Detail View Controller-->
         <scene sceneID="gbm-2h-wO9">
@@ -725,6 +788,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngh-iB-bee">
+                                <rect key="frame" x="101" y="316" width="212" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reserve Appointment"/>
+                                <connections>
+                                    <action selector="reserveAppointmentButtonClicked:" destination="J8c-r4-Dul" eventType="touchUpInside" id="jaB-Db-TmA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mwq-0d-Vhn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -733,10 +804,12 @@
                             <constraint firstItem="6Sr-tp-Y4x" firstAttribute="leading" secondItem="vPm-9k-YO0" secondAttribute="trailing" constant="5" id="3ac-J4-wfM"/>
                             <constraint firstItem="Vxj-Qq-3B1" firstAttribute="top" secondItem="Mwq-0d-Vhn" secondAttribute="top" constant="50" id="Dgs-jb-KZP"/>
                             <constraint firstItem="NwN-nS-zIT" firstAttribute="top" secondItem="vPm-9k-YO0" secondAttribute="bottom" constant="25" id="JBF-RN-2RS"/>
+                            <constraint firstItem="Mwq-0d-Vhn" firstAttribute="trailing" secondItem="Ngh-iB-bee" secondAttribute="trailing" constant="101" id="M8p-E0-nsf"/>
                             <constraint firstItem="NwN-nS-zIT" firstAttribute="leading" secondItem="Mwq-0d-Vhn" secondAttribute="leading" constant="20" id="MIR-tZ-dl2"/>
+                            <constraint firstItem="zwN-RF-9au" firstAttribute="top" secondItem="6Sr-tp-Y4x" secondAttribute="bottom" constant="25" id="QHP-Kh-eaB"/>
                             <constraint firstItem="vPm-9k-YO0" firstAttribute="top" secondItem="uDL-yV-FY0" secondAttribute="bottom" constant="25" id="Vf8-6d-xbV"/>
                             <constraint firstItem="Vxj-Qq-3B1" firstAttribute="leading" secondItem="uDL-yV-FY0" secondAttribute="trailing" constant="5" id="WYO-SF-WdH"/>
-                            <constraint firstItem="zwN-RF-9au" firstAttribute="top" secondItem="6Sr-tp-Y4x" secondAttribute="bottom" constant="25" id="XrH-6a-UAe"/>
+                            <constraint firstItem="Ngh-iB-bee" firstAttribute="leading" secondItem="Mwq-0d-Vhn" secondAttribute="leading" constant="101" id="YMF-2K-KVm"/>
                             <constraint firstItem="Mwq-0d-Vhn" firstAttribute="trailing" secondItem="zwN-RF-9au" secondAttribute="trailing" constant="10" id="fFf-gS-v3j"/>
                             <constraint firstItem="uDL-yV-FY0" firstAttribute="top" secondItem="Mwq-0d-Vhn" secondAttribute="top" constant="50" id="fKX-1a-tzm"/>
                             <constraint firstItem="uDL-yV-FY0" firstAttribute="leading" secondItem="Mwq-0d-Vhn" secondAttribute="leading" constant="20" id="jds-v7-e9d"/>
@@ -748,6 +821,7 @@
                         <outlet property="propertyAddress" destination="Vxj-Qq-3B1" id="jfW-wi-jPh"/>
                         <outlet property="propertyArea" destination="6Sr-tp-Y4x" id="pbp-oa-fqW"/>
                         <outlet property="propertyNote" destination="zwN-RF-9au" id="Bdd-fb-2S4"/>
+                        <outlet property="reserveAppointmentButton" destination="Ngh-iB-bee" id="wSo-Fx-Lr4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZl-vg-beB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -773,7 +847,7 @@
         <!--Sign Up-->
         <scene sceneID="MHO-Gh-tqC">
             <objects>
-                <viewController id="NMm-i0-Kmn" customClass="SignupViewController" customModule="The_Friendly_Gardener_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupViewController" id="NMm-i0-Kmn" customClass="SignupViewController" customModule="The_Friendly_Gardener_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nO2-aX-dmr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

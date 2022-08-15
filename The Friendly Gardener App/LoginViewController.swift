@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var customerLoginButton: UIButton!
     @IBOutlet weak var gardenerLoginButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
     
     var email:String = ""
     var password:String = ""
@@ -32,6 +33,12 @@ class LoginViewController: UIViewController {
         gardenerLoginButton.addTarget(self, action: #selector(gardenerButtonClicked), for: .touchUpInside)
     }
     
+    @IBAction func signupButtonClicked(_ sender: Any) {
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let controller = story.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true)
+    }
     @objc func customerButtonClicked(){
         getData()
         let validated = validateData()

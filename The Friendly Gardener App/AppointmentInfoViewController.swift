@@ -164,6 +164,7 @@ class AppointmentInfoViewController: UIViewController {
         newEntry.note = note
         newEntry.address = address
         newEntry.area = area
+        newEntry.taken = 0
         
         do{
             try context.save()

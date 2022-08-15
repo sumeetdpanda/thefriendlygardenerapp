@@ -8,7 +8,6 @@
 import UIKit
 
 var selectedPropertyAddress = ""
-var selectedPropertyImage = ""
 var selectedPropertyArea = ""
 var selectedPropertyDescription = ""
 
@@ -16,6 +15,7 @@ let context = (UIApplication.shared.delegate as! AppDelegate).persistentContaine
 
 class AppointmentDetailViewController: UIViewController {
 
+    @IBOutlet weak var reserveAppointmentButton: UIButton!
     @IBOutlet weak var propertyAddress: UILabel!
     @IBOutlet weak var propertyArea: UILabel!
     @IBOutlet weak var propertyNote: UILabel!
@@ -26,6 +26,8 @@ class AppointmentDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         propertyAddress.text = selectedPropertyAddress
         propertyArea.text = selectedPropertyArea
+        
+        reserveAppointmentButton.addTarget(self, action: #selector(reserveAppointmentButtonClicked), for: .touchUpInside)
     }
     
     func loadData(){
@@ -49,6 +51,28 @@ class AppointmentDetailViewController: UIViewController {
         }
     }
 
+    @IBAction func reserveAppointmentButtonClicked(_ sender: Any) {
+        do{
+            let dbData = try context.fetch(Appointment.fetchRequest())
+            
+            for appointment in dbData{
+                if(appointment.address == selectedPropertyAddress){
+                    appointment.taken = 1
+                }
+            }
+            
+            let alert = UIAlertController(title: "Success", message: "Appointment successfully reserved", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: {_ in
+                _ = self.navigationController?.popViewController(animated: true)
+            }))
+            present(alert, animated: true)
+            
+        } catch{
+            let alert = UIAlertController(title: "Error", message: "Something went wrong", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: nil))
+            present(alert, animated: true)
+        }
+    }
     /*
     // MARK: - Navigation
 
