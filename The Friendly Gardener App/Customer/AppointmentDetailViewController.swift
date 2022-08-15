@@ -12,11 +12,13 @@ var selectedPropertyImage = ""
 var selectedPropertyArea = ""
 var selectedPropertyDescription = ""
 
+let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
 class AppointmentDetailViewController: UIViewController {
 
     @IBOutlet weak var propertyAddress: UILabel!
     @IBOutlet weak var propertyArea: UILabel!
-    @IBOutlet weak var propertyImage: UIImageView!
+    @IBOutlet weak var propertyNote: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +26,28 @@ class AppointmentDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         propertyAddress.text = selectedPropertyAddress
         propertyArea.text = selectedPropertyArea
-        propertyImage.image = UIImage(named: selectedPropertyImage)
     }
     
+    func loadData(){
+        do{
+            let dbData = try context.fetch(Appointment.fetchRequest())
+            
+            for appointment in dbData{
+                if(appointment.address == selectedPropertyAddress){
+                    if(appointment.note != ""){
+                        propertyNote.text = appointment.note
+                    } else{
+                        propertyNote.text = "No Note"
+                    }
+                }
+            }
+            
+        } catch{
+            let alert = UIAlertController(title: "Error", message: "Something went wrong", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: nil))
+            present(alert, animated: true)
+        }
+    }
 
     /*
     // MARK: - Navigation

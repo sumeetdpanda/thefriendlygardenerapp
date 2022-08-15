@@ -13,18 +13,15 @@ class ChooseAppointmentViewController: UIViewController, UITableViewDataSource, 
     
     @IBOutlet weak var table: UITableView!
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     struct Property {
-        let propertyImage: String
         let propertyAddress: String
         let properyArea: String
     }
     
     // Dummy Data
-    let data: [Property] = [
-        Property(propertyImage: "backyard1", propertyAddress: "256, Lester Street, Waterloo, ON, N2L 0K3", properyArea: "300"),
-        Property(propertyImage: "backyard2", propertyAddress: "258B, Sunview Street, Waterloo, ON, N2L 0K3", properyArea: "200"),
-        Property(propertyImage: "backyard1", propertyAddress: "130-9, Columbia Street, Waterloo, ON, N2L 0K3", properyArea: "500")
-    ]
+    var data: [Property] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +42,6 @@ class ChooseAppointmentViewController: UIViewController, UITableViewDataSource, 
         rowGlobal = indexPath.row
         let cell = table.dequeueReusableCell(withIdentifier: "appointmentCell", for: indexPath) as! ChooseAppointmentTableViewCell
         cell.propertyAddress.text = appointment.propertyAddress
-        cell.propertyImage.image = UIImage(named: appointment.propertyImage)
         cell.propertyArea.text = appointment.properyArea
         cell.selectionButton.tag = indexPath.row
         cell.selectionButton.addTarget(self, action: #selector(selectionButton), for: .touchUpInside)
@@ -60,12 +56,26 @@ class ChooseAppointmentViewController: UIViewController, UITableViewDataSource, 
     {
         let indexPath1 = IndexPath(row: sender.tag, section: 0)
         selectedPropertyAddress = data[indexPath1.row].propertyAddress
-        selectedPropertyImage = data[indexPath1.row].propertyImage
         selectedPropertyArea = data[indexPath1.row].properyArea
         
         let selectedAppointment:AppointmentDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "AppointmentDetailViewController") as! AppointmentDetailViewController
         
         self.navigationController?.pushViewController(selectedAppointment, animated: true)
+    }
+    
+    func loadData(){
+        do{
+            let dbData = try context.fetch(Appointment.fetchRequest())
+            
+            for appointment in dbData{
+                data.append(Property(propertyAddress: appointment.address!, properyArea: appointment.area!))
+            }
+            
+        } catch{
+            let alert = UIAlertController(title: "Error", message: "Something went wrong", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: nil))
+            present(alert, animated: true)
+        }
     }
 
 }

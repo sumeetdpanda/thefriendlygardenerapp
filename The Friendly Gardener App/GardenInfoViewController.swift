@@ -13,7 +13,7 @@ class GardenInfoViewController: UIViewController {
         super.viewDidLoad()
         if (garden != nil) {
             titleTextField.text = garden!.title
-            areaTextField.text = String(garden!.area)
+            areaTextField.text = garden!.area
         }
     }
     
@@ -28,7 +28,7 @@ class GardenInfoViewController: UIViewController {
         let item = getItemToSave()
         
         item.title = titleTextField.text
-        item.area = Float(areaTextField.text!) ?? 0.0
+        item.area = areaTextField.text! ?? ""
         
         do {
             try self.context.save()

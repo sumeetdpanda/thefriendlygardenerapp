@@ -14,11 +14,14 @@ class AppointmentInfoViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var noteText: UITextView!
+    @IBOutlet weak var addressText: UITextField!
     
     var garden:String = ""
     var time:String = ""
     var date:String = ""
     var note:String = ""
+    var address:String = ""
+    var area:String = ""
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -94,6 +97,15 @@ class AppointmentInfoViewController: UIViewController {
         return returnGardens
     }
     
+    func populateGardenVariables(title:String){
+        let gardens = getGardens()
+        for garden in gardens {
+            if(garden.title == self.garden){
+                area = garden.area!
+            }
+        }
+    }
+    
     
     func populateGardenPopupButton(){
         
@@ -105,12 +117,17 @@ class AppointmentInfoViewController: UIViewController {
     }
     
     @objc func confirmButtonTapped(){
+        address = addressText.text!
         var error:String = ""
         if(garden != ""){
             if(date != ""){
                 if(time != ""){
-                    // Save data in CoreData
-                    saveData(garden: garden, date: date, time: time, note: note)
+                    if(address != ""){
+                        // Save data in CoreData
+                        saveData(garden: garden, date: date, time: time, address: address, area: area, note: note)
+                    }else{
+                        error = "Please insert a valid address"
+                    }
                 }else{
                     error = "Select a time"
                 }
@@ -139,12 +156,14 @@ class AppointmentInfoViewController: UIViewController {
     }
     
     //Core Data Save Data
-    func saveData(garden: String, date: String, time: String, note:String? = nil){
+    func saveData(garden: String, date: String, time: String, address:String, area:String, note:String? = nil){
         let newEntry = Appointment(context: context)
         newEntry.gardenName = garden
         newEntry.date = date
         newEntry.time = time
         newEntry.note = note
+        newEntry.address = address
+        newEntry.area = area
         
         do{
             try context.save()

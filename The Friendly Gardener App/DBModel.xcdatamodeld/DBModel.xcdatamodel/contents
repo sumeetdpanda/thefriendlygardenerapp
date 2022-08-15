@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Appointment" representedClassName="Appointment" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="area" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="String"/>
         <attribute name="gardenId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="gardenName" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="taken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="time" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Garden" representedClassName="Garden" syncable="YES" codeGenerationType="class">
-        <attribute name="area" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="area" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
@@ -20,7 +23,7 @@
         <attribute name="password" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Appointment" positionX="-38.94512939453125" positionY="-165.0779724121094" width="128" height="119"/>
+        <element name="Appointment" positionX="-38.94512939453125" positionY="-165.0779724121094" width="128" height="164"/>
         <element name="Garden" positionX="-10.45556640625" positionY="60.1505126953125" width="128" height="74"/>
         <element name="User" positionX="-190.2565307617188" positionY="-85.6874084472656" width="128" height="89"/>
     </elements>
